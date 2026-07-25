@@ -129,12 +129,123 @@ function initReveal() {
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 }
 
+/* -----------------projects carousel--------------------------------- */
+function initProjectCarousel() {
+  const track = document.getElementById("projTrack");
+  const dotsWrap = document.getElementById("projDots");
+  const prevBtn = document.querySelector(".arrow-prev");
+  const nextBtn = document.querySelector(".arrow-next");
+  if (!track || !dotsWrap) return;
+
+  const cards = Array.from(track.children);
+
+  // build dot indicators
+  cards.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "proj-dot";
+    dot.setAttribute("aria-label", `Go to project ${i + 1}`);
+    dot.addEventListener("click", () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function setActive(index) {
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function nearestIndex() {
+    const center = track.scrollLeft + track.clientWidth / 2;
+    let closest = 0;
+    let closestDist = Infinity;
+    cards.forEach((card, i) => {
+      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      const dist = Math.abs(cardCenter - center);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    });
+    return closest;
+  }
+
+  function goTo(index) {
+    const clamped = Math.max(0, Math.min(cards.length - 1, index));
+    cards[clamped].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }
+
+  // keep dots synced while the track scrolls (swipe, drag, or arrow keys)
+  let scrollRAF;
+  track.addEventListener("scroll", () => {
+    cancelAnimationFrame(scrollRAF);
+    scrollRAF = requestAnimationFrame(() => setActive(nearestIndex()));
+  });
+
+  prevBtn?.addEventListener("click", () => goTo(nearestIndex() - 1));
+  nextBtn?.addEventListener("click", () => goTo(nearestIndex() + 1));
+
+  // desktop click-and-drag swipe (touch devices already get native swipe)
+  let isDown = false;
+  let dragged = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  track.addEventListener("pointerdown", (e) => {
+    if (e.pointerType !== "mouse") return; // touch gets native scrolling, untouched
+    isDown = true;
+    dragged = false;
+    startX = e.clientX;
+    startScroll = track.scrollLeft;
+  });
+
+  window.addEventListener("pointermove", (e) => {
+    if (!isDown) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 6) dragged = true;
+    if (dragged) track.scrollLeft = startScroll - dx;
+  });
+
+  function endDrag() {
+    if (!isDown) return;
+    isDown = false;
+    if (dragged) goTo(nearestIndex());
+  }
+  window.addEventListener("pointerup", endDrag);
+
+  // stop a dragged swipe from also firing the card's link
+  track.addEventListener(
+    "click",
+    (e) => {
+      if (dragged) {
+        e.preventDefault();
+        e.stopPropagation();
+        dragged = false;
+      }
+    },
+    true,
+  );
+
+  // keyboard support when the carousel is focused
+  track.setAttribute("tabindex", "0");
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") goTo(nearestIndex() + 1);
+    else if (e.key === "ArrowLeft") goTo(nearestIndex() - 1);
+  });
+
+  setActive(0);
+}
+
 /* -----------------init--------------------------------------------- */
 resize();
 initStars();
 initNebulas();
 draw();
 initReveal();
+initProjectCarousel();
 
 window.addEventListener("resize", resize);
 window.addEventListener("scroll", () => {

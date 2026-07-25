@@ -485,10 +485,41 @@ h2 em {
   background: rgba(196, 181, 253, 0.02);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+/* swipeable carousel wrapper */
+.proj-carousel {
+  position: relative;
+}
+
+.proj-track {
+  display: flex;
   gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 2px;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.25rem 1.25rem;
+  margin: -0.5rem -0.25rem -0.75rem;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.proj-track,
+.proj-track * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.proj-track:active {
+  cursor: grabbing;
+}
+
+.proj-track::-webkit-scrollbar {
+  display: none;
 }
 
 .proj-card {
@@ -503,6 +534,11 @@ h2 em {
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  flex: 0 0 min(340px, 82vw);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 .proj-card::after {
@@ -595,6 +631,82 @@ h2 em {
   background: rgba(196, 181, 253, 0.08);
   color: var(--muted);
   border: 1px solid rgba(196, 181, 253, 0.12);
+}
+
+/* carousel arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(7, 5, 26, 0.75);
+  backdrop-filter: blur(12px);
+  color: var(--muted);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 5;
+}
+
+.carousel-arrow:hover {
+  border-color: rgba(196, 181, 253, 0.4);
+  color: var(--pink);
+  background: rgba(196, 181, 253, 0.12);
+}
+
+.arrow-prev {
+  left: -14px;
+}
+.arrow-next {
+  right: -14px;
+}
+
+/* dot indicators */
+.proj-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.proj-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dim);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.proj-dot:hover {
+  background: var(--muted);
+}
+
+.proj-dot.active {
+  background: var(--pink);
+  width: 22px;
+  border-radius: 100px;
+}
+
+@media (max-width: 780px) {
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .proj-card {
+    flex-basis: min(300px, 85vw);
+  }
 }
 
 /* --------------------education------------------------------------ */

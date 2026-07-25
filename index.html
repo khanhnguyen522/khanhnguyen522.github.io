@@ -211,110 +211,125 @@
         <div class="section-wrap">
           <div class="section-eyebrow reveal">things i've made</div>
           <h2 class="reveal">Selected <em>Projects</em></h2>
-          <div class="projects-grid">
-            <a
-              href="https://techcarecoaching.com"
-              target="_blank"
-              class="proj-card reveal"
-            >
-              <div class="proj-top">
-                <div class="proj-glyph">01</div>
-                <span class="proj-arrow">↗</span>
-              </div>
-              <div class="proj-name">Techcare Coaching</div>
-              <div class="proj-desc">
-                Mentorship platform front end and admin portal managing
-                customers, staff, and services with responsive design.
-              </div>
-              <div class="proj-tags">
-                <span class="proj-tag">React</span>
-                <span class="proj-tag">Material-UI</span>
-                <span class="proj-tag">Flask</span>
-                <span class="proj-tag">PostgreSQL</span>
-              </div>
-            </a>
 
-            <a
-              href="https://ai-expense-tracker-nine-omega.vercel.app/"
-              target="_blank"
-              class="proj-card reveal"
+          <div class="proj-carousel reveal">
+            <button
+              class="carousel-arrow arrow-prev"
+              aria-label="Previous project"
+              type="button"
             >
-              <div class="proj-top">
-                <div class="proj-glyph">02</div>
-                <span class="proj-arrow">↗</span>
-              </div>
-              <div class="proj-name">AI Expense Tracker</div>
-              <div class="proj-desc">
-                Full-stack receipt scanner that uses Claude AI to extract store,
-                amount, category, and date from photos. Available on web and iOS
-                with real-time sync, spending analytics, and AI-generated
-                insights.
-              </div>
-              <div class="proj-tags">
-                <span class="proj-tag">React</span>
-                <span class="proj-tag">React Native</span>
-                <span class="proj-tag">Claude API</span>
-                <span class="proj-tag">Node.js</span>
-                <span class="proj-tag">PostgreSQL</span>
-                <span class="proj-tag">AWS EC2</span>
-              </div>
-            </a>
+              ‹
+            </button>
 
-            <a
-              href="http://habit-tracker-khanh.duckdns.org"
-              target="_blank"
-              class="proj-card reveal"
-            >
-              <div class="proj-top">
-                <div class="proj-glyph">03</div>
-                <span class="proj-arrow">↗</span>
-              </div>
-              <div class="proj-name">AI Habit Tracker</div>
-              <div class="proj-desc">
-                Full-stack PWA habit tracker built for internship prep. Tracks
-                daily habits, calculates an internship readiness score,
-                visualizes progress with a GitHub-style heatmap and streak
-                analytics, and generates weekly AI-powered reviews using Claude.
-                Installable on iPhone and Android.
-              </div>
-              <div class="proj-tags">
-                <span class="proj-tag">React PWA</span>
-                <span class="proj-tag">Node.js</span>
-                <span class="proj-tag">PostgreSQL</span>
-                <span class="proj-tag">Claude API</span>
-                <span class="proj-tag">Docker</span>
-                <span class="proj-tag">AWS EC2</span>
-                <span class="proj-tag">Nginx</span>
-              </div>
-            </a>
+            <div class="proj-track" id="projTrack">
+              <a
+                href="https://techcarecoaching.com"
+                target="_blank"
+                class="proj-card"
+                draggable="false"
+              >
+                <div class="proj-top">
+                  <div class="proj-glyph">01</div>
+                  <span class="proj-arrow">↗</span>
+                </div>
+                <div class="proj-name">Techcare Coaching</div>
+                <div class="proj-desc">
+                  Mentorship platform front end and admin portal managing
+                  customers, staff, and services with responsive design.
+                </div>
+                <div class="proj-tags">
+                  <span class="proj-tag">React</span>
+                  <span class="proj-tag">Material-UI</span>
+                  <span class="proj-tag">Flask</span>
+                  <span class="proj-tag">PostgreSQL</span>
+                </div>
+              </a>
 
-            <div
-              class="proj-card reveal"
-              style="opacity: 0.45; cursor: default"
-            >
-              <div class="proj-top">
-                <div class="proj-glyph">04</div>
-                <span
-                  style="
-                    font-size: 0.6rem;
-                    letter-spacing: 0.15em;
-                    text-transform: uppercase;
-                    color: var(--dim);
-                    border: 1px solid var(--border);
-                    padding: 3px 10px;
-                    border-radius: 100px;
-                  "
-                  >Coming Soon</span
-                >
+              <a
+                href="https://snapspend-tau.vercel.app/"
+                target="_blank"
+                class="proj-card"
+                draggable="false"
+              >
+                <div class="proj-top">
+                  <div class="proj-glyph">02</div>
+                  <span class="proj-arrow">↗</span>
+                </div>
+                <div class="proj-name">Snapspend</div>
+                <div class="proj-desc">
+                  Photo-first expense tracker PWA with JWT auth, a calendar and
+                  overview layout, and a dynamic bucket-based budgeting system
+                  with a live semicircular budget gauge.
+                </div>
+                <div class="proj-tags">
+                  <span class="proj-tag">React</span>
+                  <span class="proj-tag">Node.js</span>
+                  <span class="proj-tag">PostgreSQL</span>
+                  <span class="proj-tag">JWT</span>
+                  <span class="proj-tag">Docker</span>
+                  <span class="proj-tag">AWS EC2</span>
+                </div>
+              </a>
+
+              <div class="proj-card" style="opacity: 0.45; cursor: default">
+                <div class="proj-top">
+                  <div class="proj-glyph">03</div>
+                  <span
+                    style="
+                      font-size: 0.6rem;
+                      letter-spacing: 0.15em;
+                      text-transform: uppercase;
+                      color: var(--dim);
+                      border: 1px solid var(--border);
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Coming Soon</span
+                  >
+                </div>
+                <div class="proj-name" style="color: var(--dim)">
+                  Next Project
+                </div>
+                <div class="proj-desc">
+                  Something new is in the works. Check back soon.
+                </div>
               </div>
-              <div class="proj-name" style="color: var(--dim)">
-                Next Project
-              </div>
-              <div class="proj-desc">
-                Something new is in the works. Check back soon.
+
+              <div class="proj-card" style="opacity: 0.45; cursor: default">
+                <div class="proj-top">
+                  <div class="proj-glyph">04</div>
+                  <span
+                    style="
+                      font-size: 0.6rem;
+                      letter-spacing: 0.15em;
+                      text-transform: uppercase;
+                      color: var(--dim);
+                      border: 1px solid var(--border);
+                      padding: 3px 10px;
+                      border-radius: 100px;
+                    "
+                    >Coming Soon</span
+                  >
+                </div>
+                <div class="proj-name" style="color: var(--dim)">
+                  Next Project
+                </div>
+                <div class="proj-desc">
+                  Something new is in the works. Check back soon.
+                </div>
               </div>
             </div>
+
+            <button
+              class="carousel-arrow arrow-next"
+              aria-label="Next project"
+              type="button"
+            >
+              ›
+            </button>
           </div>
+
+          <div class="proj-dots" id="projDots"></div>
         </div>
       </section>
 
