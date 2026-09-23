@@ -4,423 +4,347 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khanh Nguyen</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="cosmos"></canvas>
+    <header>
+      <div class="wrap header-bar">
+        <a href="#" class="brand">
+          <span class="mark">KN</span>
+          Khanh Nguyen
+        </a>
+        <nav>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="content">
-      <!-------------- Navigation ------------------->
-      <nav>
-        <div class="nav-name">Khanh Nguyen</div>
-        <ul class="nav-links">
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-------------------- Hero ---------------------->
-      <section id="hero">
-        <div class="hero-glow glow-1"></div>
-        <div class="hero-glow glow-2"></div>
-        <div class="hero-glow glow-3"></div>
-        <div>
-          <div class="hero-eyebrow reveal">Software Engineer &amp; Builder</div>
-          <h1 class="reveal">
-            <span class="first">Khanh</span>
-            <span class="last">Nguyen</span>
-          </h1>
-          <p class="hero-desc reveal">
-            Still learning, always building. Master's student in CS with
-            hands-on experience shipping production software. Open to what's
-            next.
-          </p>
-          <div class="hero-ctas reveal">
-            <a href="#contact" class="btn-dream btn-filled">Get in touch ✦</a>
-            <a href="#projects" class="btn-dream btn-outline">View my work</a>
-            <a
-              href="https://github.com/khanhnguyen522"
-              target="_blank"
-              class="btn-dream btn-outline"
-              >GitHub ↗</a
-            >
-          </div>
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="wrap">
+        <p class="role">Software Engineer</p>
+        <h1>Khanh Nguyen</h1>
+        <p class="hero-desc">
+          Master's student in Computer Science, with production experience
+          shipping full-stack software at Medpace. Looking for full-time
+          software engineering roles.
+        </p>
+        <div class="hero-links">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#projects" class="btn">View my work</a>
+          <a
+            href="https://github.com/khanhnguyen522"
+            target="_blank"
+            class="btn"
+            >GitHub</a
+          >
         </div>
-        <div class="scroll-hint">
-          <div class="scroll-line"></div>
-          <span>scroll</span>
+        <p class="currently">
+          <span class="currently-dot"></span>
+          Prepping for SWE interviews — DSA, systems design, and the rest
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="wrap section">
+        <h2>Skills</h2>
+
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>C#</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>C / C++</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul class="tag-list">
+            <li>Angular</li>
+            <li>React</li>
+            <li>NgRx</li>
+            <li>Redux</li>
+            <li>Material UI</li>
+            <li>Tailwind</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul class="tag-list">
+            <li>.NET Core</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Flask</li>
+            <li>Docker</li>
+            <li>Socket.io</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Cloud &amp; Data</h3>
+          <ul class="tag-list">
+            <li>AWS</li>
+            <li>Microsoft Azure</li>
+            <li>SQL Server</li>
+            <li>Cosmos DB</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>Redis</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Testing &amp; DevOps</h3>
+          <ul class="tag-list">
+            <li>Cypress</li>
+            <li>xUnit</li>
+            <li>CI/CD</li>
+            <li>Azure DevOps</li>
+            <li>App Insights</li>
+          </ul>
         </div>
       </section>
 
-      <div class="star-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <!-- Experience -->
+      <section id="experience" class="wrap section">
+        <h2>Experience</h2>
 
-      <!--------------------- skills ---------------->
-      <section id="skills">
-        <div class="section-wrap">
-          <div class="section-eyebrow reveal">what i work with</div>
-          <h2 class="reveal">Technical <em>Skills</em></h2>
-
-          <div class="skills-section-label reveal">Languages</div>
-          <div class="skills-cloud reveal">
-            <span class="skill-pill sp-lavender">C#</span>
-            <span class="skill-pill sp-lavender">TypeScript</span>
-            <span class="skill-pill sp-lavender">JavaScript</span>
-            <span class="skill-pill sp-lavender">Python</span>
-            <span class="skill-pill sp-lavender">Java</span>
-            <span class="skill-pill sp-lavender">SQL</span>
-            <span class="skill-pill sp-lavender">C / C++</span>
-          </div>
-
-          <div class="skills-section-label reveal">Frontend</div>
-          <div class="skills-cloud reveal">
-            <span class="skill-pill sp-pink">Angular</span>
-            <span class="skill-pill sp-pink">React</span>
-            <span class="skill-pill sp-pink">NgRx</span>
-            <span class="skill-pill sp-pink">Redux</span>
-            <span class="skill-pill sp-pink">Material UI</span>
-            <span class="skill-pill sp-pink">Tailwind</span>
-          </div>
-
-          <div class="skills-section-label reveal">Backend</div>
-          <div class="skills-cloud reveal">
-            <span class="skill-pill sp-sky">.NET Core</span>
-            <span class="skill-pill sp-sky">Node.js</span>
-            <span class="skill-pill sp-sky">Express.js</span>
-            <span class="skill-pill sp-sky">Flask</span>
-            <span class="skill-pill sp-sky">Docker</span>
-            <span class="skill-pill sp-sky">Socket.io</span>
-          </div>
-
-          <div class="skills-section-label reveal">Cloud &amp; Data</div>
-          <div class="skills-cloud reveal">
-            <span class="skill-pill sp-rose">AWS</span>
-            <span class="skill-pill sp-rose">Microsoft Azure</span>
-            <span class="skill-pill sp-rose">SQL Server</span>
-            <span class="skill-pill sp-rose">Cosmos DB</span>
-            <span class="skill-pill sp-rose">MongoDB</span>
-            <span class="skill-pill sp-rose">PostgreSQL</span>
-            <span class="skill-pill sp-rose">Redis</span>
-          </div>
-
-          <div class="skills-section-label reveal">Testing &amp; DevOps</div>
-          <div class="skills-cloud reveal">
-            <span class="skill-pill sp-cream">Cypress</span>
-            <span class="skill-pill sp-cream">xUnit</span>
-            <span class="skill-pill sp-cream">CI/CD</span>
-            <span class="skill-pill sp-cream">Azure DevOps</span>
-            <span class="skill-pill sp-cream">App Insights</span>
-          </div>
-        </div>
-      </section>
-
-      <div class="star-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-      <!------------------------ Experience ---------------------------------->
-      <section id="experience">
-        <div class="section-wrap">
-          <div class="section-eyebrow reveal">where i've been</div>
-          <h2 class="reveal">Work <em>Experience</em></h2>
-
-          <div class="exp-item reveal">
-            <div class="exp-header">
-              <div>
-                <div class="exp-role">Software Engineer</div>
-                <div class="exp-company">Medpace · Cincinnati, OH</div>
-              </div>
-              <div class="exp-date">Jun – Oct 2025</div>
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>Software Engineer</h3>
+              <p class="entry-org">Medpace, Cincinnati, OH</p>
             </div>
-            <ul class="exp-bullets">
-              <li>
-                Drove end-to-end feature delivery across 6+ sprints, partnering
-                with clients and analysts to translate requirements into
-                production-ready software on schedule.
-              </li>
-              <li>
-                Shipped 10+ full-stack features spanning C# REST APIs, Angular
-                UI, and multi-database layers (SQL Server + Cosmos DB), each
-                designed for long-term maintainability.
-              </li>
-              <li>
-                Cut form load times by ~30% by diagnosing bottlenecks and
-                refactoring backend queries - directly improving daily user
-                experience.
-              </li>
+            <p class="entry-date">Jun – Oct 2025</p>
+          </div>
+          <ul>
+            <li>
+              Drove end-to-end feature delivery across 6+ sprints, partnering
+              with clients and analysts to translate requirements into
+              production-ready software on schedule.
+            </li>
+            <li>
+              Shipped 10+ full-stack features spanning C# REST APIs, Angular UI,
+              and multi-database layers (SQL Server + Cosmos DB), each designed
+              for long-term maintainability.
+            </li>
+            <li>
+              Cut form load times by ~30% by diagnosing bottlenecks and
+              refactoring backend queries — directly improving daily user
+              experience.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>Software Development Intern</h3>
+              <p class="entry-org">Medpace, Cincinnati, OH</p>
+            </div>
+            <p class="entry-date">May 2024 – May 2025</p>
+          </div>
+          <ul>
+            <li>
+              Diagnosed and resolved critical bugs in a production web app,
+              shipping targeted fixes and features that drove a 20% reduction in
+              support tickets.
+            </li>
+            <li>
+              Instrumented APIs with Azure App Insights to surface usage
+              patterns and bottlenecks, then optimized stored procedures to
+              achieve a 15% reduction in response time.
+            </li>
+            <li>
+              Contributed to architecting and building a greenfield full-stack
+              application using C#, .NET Core, Angular, SQL Server, and Cosmos
+              DB — from blank repo to production.
+            </li>
+            <li>
+              Brought test coverage from near zero to 70% on the Angular
+              frontend (Cypress) and 20% on C# backend services, reducing
+              regression risk and stabilizing CI/CD pipelines.
+            </li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>Undergraduate Research Assistant</h3>
+              <p class="entry-org">
+                Northern Kentucky University, Highland Heights, KY
+              </p>
+            </div>
+            <p class="entry-date">May – Jul 2022</p>
+          </div>
+          <ul>
+            <li>
+              Implemented a self-playing Flappy Bird agent in Java/JavaFX,
+              applying the NEAT algorithm to evolve neural network controllers
+              through reinforcement learning.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="wrap section">
+        <h2>Projects</h2>
+
+        <div class="proj-grid">
+          <a href="https://techcarecoaching.com" target="_blank" class="proj">
+            <div class="proj-head">
+              <h3>Techcare Coaching</h3>
+              <span class="proj-arrow">↗</span>
+            </div>
+            <p>
+              Mentorship platform front end and admin portal managing customers,
+              staff, and services with responsive design.
+            </p>
+            <ul class="tag-list mono">
+              <li>React</li>
+              <li>Material-UI</li>
+              <li>Flask</li>
+              <li>PostgreSQL</li>
             </ul>
-          </div>
+          </a>
 
-          <div class="exp-item reveal">
-            <div class="exp-header">
-              <div>
-                <div class="exp-role">Software Development Intern</div>
-                <div class="exp-company">Medpace · Cincinnati, OH</div>
-              </div>
-              <div class="exp-date">May 2024 – May 2025</div>
+          <a
+            href="https://snapspend-tau.vercel.app/"
+            target="_blank"
+            class="proj"
+          >
+            <div class="proj-head">
+              <h3>Snapspend</h3>
+              <span class="proj-arrow">↗</span>
             </div>
-            <ul class="exp-bullets">
-              <li>
-                Diagnosed and resolved critical bugs in a production web app,
-                shipping targeted fixes and features that drove a 20% reduction
-                in support tickets.
-              </li>
-              <li>
-                Instrumented APIs with Azure App Insights to surface usage
-                patterns and bottlenecks, then optimized stored procedures to
-                achieve a 15% reduction in response time.
-              </li>
-              <li>
-                Contributed to architecting and building a greenfield full-stack
-                application using C#, .NET Core, Angular, SQL Server, and Cosmos
-                DB - from blank repo to production.
-              </li>
-              <li>
-                Brought test coverage from near zero to 70% on the Angular
-                frontend (Cypress) and 20% on C# backend services, reducing
-                regression risk and stabilizing CI/CD pipelines.
-              </li>
+            <p>
+              Photo-first expense tracker PWA with JWT auth, a calendar and
+              overview layout, and a dynamic bucket-based budgeting system with
+              a live semicircular budget gauge.
+            </p>
+            <ul class="tag-list mono">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>JWT</li>
+              <li>Docker</li>
+              <li>AWS EC2</li>
             </ul>
-          </div>
+          </a>
 
-          <div class="exp-item reveal">
-            <div class="exp-header">
-              <div>
-                <div class="exp-role">Undergraduate Research Assistant</div>
-                <div class="exp-company">
-                  Northern Kentucky University · Highland Heights, KY
-                </div>
-              </div>
-              <div class="exp-date">May – Jul 2022</div>
+          <a href="https://fotd-sable.vercel.app/" target="_blank" class="proj">
+            <div class="proj-head">
+              <h3>FOTD</h3>
+              <span class="proj-arrow">↗</span>
             </div>
-            <ul class="exp-bullets">
-              <li>
-                Implemented a self-playing Flappy Bird agent in Java/JavaFX,
-                applying the NEAT algorithm to evolve neural network controllers
-                through reinforcement learning.
-              </li>
+            <p>
+              AI outfit generator PWA — Claude Vision auto-tags every piece you
+              upload, and outfits are ranked by a color-compatibility scoring
+              system, with weather-based generation using live location and
+              forecast data.
+            </p>
+            <ul class="tag-list mono">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>AWS S3</li>
+              <li>Claude API</li>
             </ul>
+          </a>
+
+          <div class="proj proj-empty">
+            <div class="proj-head">
+              <h3>Next project</h3>
+              <span class="proj-status">Coming soon</span>
+            </div>
+            <p>Something new is in the works. Check back soon.</p>
           </div>
         </div>
       </section>
 
-      <div class="star-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <!-- Education -->
+      <section id="education" class="wrap section">
+        <h2>Education</h2>
 
-      <!-------------------- Projects ------------------------------->
-      <section id="projects">
-        <div class="section-wrap">
-          <div class="section-eyebrow reveal">things i've made</div>
-          <h2 class="reveal">Selected <em>Projects</em></h2>
-
-          <div class="proj-carousel reveal">
-            <button
-              class="carousel-arrow arrow-prev"
-              aria-label="Previous project"
-              type="button"
-            >
-              ‹
-            </button>
-
-            <div class="proj-track" id="projTrack">
-              <a
-                href="https://techcarecoaching.com"
-                target="_blank"
-                class="proj-card"
-                draggable="false"
-              >
-                <div class="proj-top">
-                  <div class="proj-glyph">01</div>
-                  <span class="proj-arrow">↗</span>
-                </div>
-                <div class="proj-name">Techcare Coaching</div>
-                <div class="proj-desc">
-                  Mentorship platform front end and admin portal managing
-                  customers, staff, and services with responsive design.
-                </div>
-                <div class="proj-tags">
-                  <span class="proj-tag">React</span>
-                  <span class="proj-tag">Material-UI</span>
-                  <span class="proj-tag">Flask</span>
-                  <span class="proj-tag">PostgreSQL</span>
-                </div>
-              </a>
-
-              <a
-                href="https://snapspend-tau.vercel.app/"
-                target="_blank"
-                class="proj-card"
-                draggable="false"
-              >
-                <div class="proj-top">
-                  <div class="proj-glyph">02</div>
-                  <span class="proj-arrow">↗</span>
-                </div>
-                <div class="proj-name">Snapspend</div>
-                <div class="proj-desc">
-                  Photo-first expense tracker PWA with JWT auth, a calendar and
-                  overview layout, and a dynamic bucket-based budgeting system
-                  with a live semicircular budget gauge.
-                </div>
-                <div class="proj-tags">
-                  <span class="proj-tag">React</span>
-                  <span class="proj-tag">Node.js</span>
-                  <span class="proj-tag">PostgreSQL</span>
-                  <span class="proj-tag">JWT</span>
-                  <span class="proj-tag">Docker</span>
-                  <span class="proj-tag">AWS EC2</span>
-                </div>
-              </a>
-
-              <div class="proj-card" style="opacity: 0.45; cursor: default">
-                <div class="proj-top">
-                  <div class="proj-glyph">03</div>
-                  <span
-                    style="
-                      font-size: 0.6rem;
-                      letter-spacing: 0.15em;
-                      text-transform: uppercase;
-                      color: var(--dim);
-                      border: 1px solid var(--border);
-                      padding: 3px 10px;
-                      border-radius: 100px;
-                    "
-                    >Coming Soon</span
-                  >
-                </div>
-                <div class="proj-name" style="color: var(--dim)">
-                  Next Project
-                </div>
-                <div class="proj-desc">
-                  Something new is in the works. Check back soon.
-                </div>
-              </div>
-
-              <div class="proj-card" style="opacity: 0.45; cursor: default">
-                <div class="proj-top">
-                  <div class="proj-glyph">04</div>
-                  <span
-                    style="
-                      font-size: 0.6rem;
-                      letter-spacing: 0.15em;
-                      text-transform: uppercase;
-                      color: var(--dim);
-                      border: 1px solid var(--border);
-                      padding: 3px 10px;
-                      border-radius: 100px;
-                    "
-                    >Coming Soon</span
-                  >
-                </div>
-                <div class="proj-name" style="color: var(--dim)">
-                  Next Project
-                </div>
-                <div class="proj-desc">
-                  Something new is in the works. Check back soon.
-                </div>
-              </div>
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>M.S. Computer Science</h3>
+              <p class="entry-org">University of Dayton</p>
             </div>
-
-            <button
-              class="carousel-arrow arrow-next"
-              aria-label="Next project"
-              type="button"
-            >
-              ›
-            </button>
+            <p class="entry-date">Expected Dec 2027</p>
           </div>
+          <p class="gpa">GPA 4.0 / 4.0</p>
+        </article>
 
-          <div class="proj-dots" id="projDots"></div>
-        </div>
+        <article class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>B.S. Computer Science</h3>
+              <p class="entry-org">
+                Northern Kentucky University, Highland Heights, KY
+              </p>
+            </div>
+            <p class="entry-date">Graduated May 2025</p>
+          </div>
+          <p class="gpa">GPA 3.98 / 4.0</p>
+        </article>
       </section>
 
-      <div class="star-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-      <!----------------- Education ----------------------------->
-      <section id="education">
-        <div class="section-wrap">
-          <div class="section-eyebrow reveal">where i've studied</div>
-          <h2 class="reveal">Education</h2>
-          <div class="edu-grid">
-            <div class="edu-card reveal">
-              <div class="edu-degree">M.S. Computer Science</div>
-              <div class="edu-school">University of Dayton</div>
-              <div class="edu-meta">Expected December 2027</div>
-              <div><span class="edu-gpa">GPA 4.0 / 4.0</span></div>
-            </div>
-            <div class="edu-card reveal">
-              <div class="edu-degree">B.S. Computer Science</div>
-              <div class="edu-school">Northern Kentucky University</div>
-              <div class="edu-meta">
-                Graduated May 2025 · Highland Heights, KY
-              </div>
-              <div><span class="edu-gpa">GPA 3.98 / 4.0</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Contact -->
+      <section id="contact" class="wrap section">
+        <h2>Contact</h2>
+        <p class="contact-sub">
+          Open to full-time software engineering roles. Always happy to connect
+          and talk about interesting ideas.
+        </p>
 
-      <!------------------ Contact ---------------------->
-      <section id="contact">
-        <div class="contact-wrap">
-          <div class="contact-eyebrow reveal">get in touch</div>
-          <h2 class="contact-heading reveal">
-            Let's <span>dream</span><br />something up.
-          </h2>
-          <p class="contact-sub reveal">
-            Open to full-time software engineering roles. Always happy to
-            connect and talk about interesting ideas.
-          </p>
-          <div class="contact-links reveal">
-            <a href="mailto:tkthuckhank22@gmail.com" class="contact-link">
-              <span class="cl-icon">✉</span>
-              <div class="cl-inner">
-                <div class="cl-label">Email</div>
-                <div class="cl-val">tkthuckhank22@gmail.com</div>
-              </div>
-              <span class="cl-arrow">→</span>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:tkthuckhank22@gmail.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-val">tkthuckhank22@gmail.com</span>
             </a>
+          </li>
+          <li>
             <a
               href="https://www.linkedin.com/in/khanhnguyen02/"
               target="_blank"
-              class="contact-link"
             >
-              <span class="cl-icon">in</span>
-              <div class="cl-inner">
-                <div class="cl-label">LinkedIn</div>
-                <div class="cl-val">linkedin.com/in/khanhnguyen02</div>
-              </div>
-              <span class="cl-arrow">→</span>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/khanhnguyen02</span>
             </a>
-            <a
-              href="https://github.com/khanhnguyen522"
-              target="_blank"
-              class="contact-link"
-            >
-              <span class="cl-icon">{}</span>
-              <div class="cl-inner">
-                <div class="cl-label">GitHub</div>
-                <div class="cl-val">github.com/khanhnguyen522</div>
-              </div>
-              <span class="cl-arrow">→</span>
+          </li>
+          <li>
+            <a href="https://github.com/khanhnguyen522" target="_blank">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/khanhnguyen522</span>
             </a>
-            <a href="tel:8597862761" class="contact-link">
-              <span class="cl-icon">☎</span>
-              <div class="cl-inner">
-                <div class="cl-label">Phone</div>
-                <div class="cl-val">859-786-2761</div>
-              </div>
-              <span class="cl-arrow">→</span>
+          </li>
+          <li>
+            <a href="tel:8597862761">
+              <span class="contact-label">Phone</span>
+              <span class="contact-val">859-786-2761</span>
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
+    </main>
 
-      <!------------------- Footer --------------------------->
-      <footer>
-        <span>✦ Khanh Nguyen · 2026</span>
-        <span>Crafted with care</span>
-      </footer>
-    </div>
-
-    <script src="js/main.js"></script>
+    <footer class="wrap">
+      <span>© 2026 Khanh Nguyen</span>
+    </footer>
   </body>
 </html>
